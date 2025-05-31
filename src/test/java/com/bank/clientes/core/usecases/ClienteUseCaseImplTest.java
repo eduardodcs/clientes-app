@@ -14,13 +14,14 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
 import com.bank.clientes.adapters.gateways.IClienteGateway;
+import com.bank.clientes.adapters.usecases.IClienteUseCase;
 import com.bank.clientes.core.entities.Cliente;
 
 
 class ClienteUseCaseImplTest {
 
     @InjectMocks
-    ClienteUseCaseImpl clienteUseCase;
+    IClienteUseCase clienteUseCase;
 
     @Mock
     IClienteGateway clienteGateway;

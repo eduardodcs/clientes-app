@@ -4,12 +4,8 @@ import java.util.Optional;
 
 import com.bank.clientes.core.entities.Cliente;
 
-public interface IClienteGateway {
+public interface IClienteGateway extends ICrudGateway<Cliente, Long> {
 
-    Cliente salvar(Cliente cliente);
     Optional<Cliente> buscarPorCpf(String cpf);
-    Optional<Cliente> buscarPorId(Long id);
-    Cliente atualizar(Cliente cliente);
-    void ativarInativar(Long id);
 
 }
