@@ -37,7 +37,7 @@ jobs:
           SONAR_HOST_URL: https://sonarcloud.io
 
       - name: Check Quality Gate
-        uses: SonarSource/sonarcloud-quality-gate-action@v1.1.0
+        uses: SonarSource/sonarcloud-quality-gate-action@master
         with:
           scanMetadataReportFile: .scannerwork/report-task.txt
         env:
