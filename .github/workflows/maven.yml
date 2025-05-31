@@ -6,9 +6,8 @@ on:
       - master
 
 jobs:
-
-  build-app:
-    name: Build da aplicação
+  sonar:
+    name: Análise com SonarQube
     runs-on: ubuntu-latest
 
     steps:
@@ -40,6 +39,16 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
+
+
+  build-app:
+    name: Build da aplicação
+    needs: sonar
+    runs-on: ubuntu-latest
+
+    if: success()
+
+    steps:
 
       - name: Checkout
         uses: actions/checkout@v3
