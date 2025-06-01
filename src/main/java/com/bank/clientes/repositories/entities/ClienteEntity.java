@@ -20,7 +20,7 @@ import lombok.NoArgsConstructor;
 @Getter
 @Builder(toBuilder = true)
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-@AllArgsConstructor(access = AccessLevel.PRIVATE)
+@AllArgsConstructor(access = AccessLevel.PUBLIC)
 public class ClienteEntity {
 
     @Id

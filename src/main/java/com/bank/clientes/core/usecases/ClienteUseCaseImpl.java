@@ -6,8 +6,9 @@ import java.util.Objects;
 import com.bank.clientes.adapters.gateways.IClienteGateway;
 import com.bank.clientes.adapters.usecases.IClienteUseCase;
 import com.bank.clientes.core.entities.Cliente;
-import com.bank.clientes.core.exceptions.BusinessException;
-import com.bank.clientes.core.exceptions.NotFoundException;
+import com.bank.common_web.exceptions.BusinessException;
+import com.bank.common_web.exceptions.NotFoundException;
+
 
 public class ClienteUseCaseImpl implements IClienteUseCase {
 

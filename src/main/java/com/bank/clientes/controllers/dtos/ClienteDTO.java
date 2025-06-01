@@ -2,10 +2,8 @@ package com.bank.clientes.controllers.dtos;
 
 import java.time.LocalDate;
 
-import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.br.CPF;
 
-// import com.fasterxml.jackson.annotation.JsonSubTypes.Type; // Removed unused and incorrect import
 import jakarta.validation.constraints.Pattern;
 
 import jakarta.validation.constraints.NotBlank;
@@ -16,7 +14,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Getter
-@Builder
+@Builder(toBuilder = true)
 @NoArgsConstructor
 @AllArgsConstructor
 public class ClienteDTO {
