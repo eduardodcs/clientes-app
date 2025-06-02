@@ -18,9 +18,11 @@ management:
   endpoints:
     web:
       exposure:
-        include: health,info,prometheus
-
-  prometheus:
+        include: "*"
+  endpoint:
+    prometheus:
+      access: read-only
+  prometheus:    
     metrics:
       export:
         enabled: true
