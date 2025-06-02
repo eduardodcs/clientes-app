@@ -5,7 +5,7 @@ import java.time.LocalDate;
 import org.hibernate.validator.constraints.br.CPF;
 
 import jakarta.validation.constraints.Pattern;
-
+import jakarta.validation.constraints.Size;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
@@ -25,8 +25,11 @@ public class ClienteDTO {
     @NotBlank(message = "CPF é obrigatório")
     @CPF(message = "CPF inválido")
     private String cpf;
-    private int telefone;
+    @Pattern(regexp = "\\d+", message = "O telefone deve conter apenas números.")
+    @Size(max = 11, message = "O telefone deve ter no máximo 11 dígitos.")
+    private String telefone;
     @NotNull(message = "CEP é obrigatório")
+    @Size(min = 8, max = 8, message = "CEP deve ter exatamente 8 dígitos")
     private int cep;
     private String endereco;
     private int numero;

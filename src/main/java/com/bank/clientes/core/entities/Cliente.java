@@ -8,7 +8,7 @@ public class Cliente {
     private Long id;
     private String nome;
     private String cpf;
-    private int telefone;
+    private String telefone;
     private int cep;
     private String endereco;
     private int numero;
@@ -45,7 +45,7 @@ public class Cliente {
             return this;
         }
 
-        public Builder telefone(int telefone) {
+        public Builder telefone(String telefone) {
             cliente.telefone = telefone;
             return this;
         }
@@ -118,7 +118,7 @@ public class Cliente {
     public String getCpf() {
         return cpf;
     }
-    public int getTelefone() {
+    public String getTelefone() {
         return telefone;
     }
     public int getCep() {
