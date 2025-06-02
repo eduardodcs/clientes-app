@@ -30,7 +30,7 @@ public class ClienteEntity {
     private String nome;
     @Column(length = 11, unique = true, nullable = false)
     private String cpf;
-    private int telefone;
+    private String telefone;
     @Column(length = 8, nullable = false)
     private int cep;
     private String endereco;
