@@ -25,8 +25,8 @@ public class ClienteDTO {
     @NotBlank(message = "CPF é obrigatório")
     @CPF(message = "CPF inválido")
     private String cpf;
-    @Pattern(regexp = "\\d+", message = "O telefone deve conter apenas números.")
     @Size(max = 11, message = "O telefone deve ter no máximo 11 dígitos.")
+    @Pattern(regexp = "\\d+", message = "O telefone deve conter apenas números.")
     private String telefone;
     @NotNull(message = "CEP é obrigatório")
     @Size(min = 8, max = 8, message = "CEP deve ter exatamente 8 dígitos")
